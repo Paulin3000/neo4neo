@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine CSS Webseite</title>
+    <title>neo4neo</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<h1>Hallo Welt!</h1>
-<p>Das ist meine erste Webseite nur mit CSS.</p>
+<section class="hero">
+    <video playsinline autoplay muted loop poster="path/to/poster-image.jpg" id="bg-video">
+        <source src="assets/background-video.mp4" type="video/mp4">
+        Dein Browser unterstützt das Video-Tag nicht.
+    </video>
+
+    <div class="hero-content">
+        <h1>Willkommen auf meiner Seite</h1>
+        <p>Ein Slogan, der begeistert.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+    </div>
+</section>
 
 </body>
 </html>
