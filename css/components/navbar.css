@@ -1,20 +1,20 @@
-/* Navbar Base Styles */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .navbar-container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 var(--padding-x) ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +52,7 @@
     transition: color 0.3s ease;
     position: relative;
 }
-
+/*
 .nav-link:hover {
     color: #007bff;
 }
@@ -71,6 +71,8 @@
 .nav-link:hover::after {
     width: 100%;
 }
+
+ */
 
 /* CTA Button */
 .navbar-cta {
@@ -213,7 +215,5 @@
         gap: 1rem;
     }
     
-    .navbar-container {
-        padding: 0 1.5rem;
-    }
+
 }
