@@ -1,0 +1,22 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    color: #fff;
+    background-color: var(--color-brand-pink);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    border: none;
+}
+
+.button:hover {
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.button img {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
