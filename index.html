@@ -6,9 +6,13 @@
     <title>neo4neo</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
 
 </head>
 <body>
+
+
+<div id="navbar-container"></div>
 
 <section class="hero">
 
@@ -23,12 +27,24 @@
         </div>
     </div>
 
-
 </section>
 
 <section class="courses">
 
 </section>
+
+<script src="js/navbar.js"></script>
+<script>
+    // Load navbar HTML
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+            // Reinitialize navbar after loading
+            new Navbar();
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
 
 </body>
 </html>
