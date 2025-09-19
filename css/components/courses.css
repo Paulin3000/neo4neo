@@ -1,3 +1,68 @@
 .courses {
-    height: 800px;
+    position: relative;
+    z-index: 10; /* Higher than hero (1) but lower than navbar (1000) */
+    background: white;
+    min-height: 120vh; /* Temporary height for testing - make it taller than viewport */
+    padding: 4rem var(--padding-x) 2rem;
+    margin-top: 0;
+    
+    /* Optional: Add some visual styling for testing */
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.courses-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.courses h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+}
+
+.courses p {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Placeholder content for testing */
+.course-placeholder {
+    height: 200px;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+    .courses {
+        padding: 3rem var(--padding-x) 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses {
+        padding: 2rem var(--padding-x) 1rem;
+    }
+    
+    .course-placeholder {
+        height: 150px;
+        font-size: 18px;
+    }
 }
