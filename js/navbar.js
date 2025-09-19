@@ -5,6 +5,8 @@ class Navbar {
         this.navbarToggle = document.getElementById('navbar-toggle');
         this.navbarOverlay = document.getElementById('navbar-overlay');
         this.navbarNav = document.getElementById('navbar-nav');
+        this.navbarExtended = document.getElementById('navbar-extended');
+        this.dropdownItem = document.querySelector('.nav-item.has-sub');
         
         this.init();
     }
@@ -31,22 +33,61 @@ class Navbar {
             link.addEventListener('click', () => this.closeMobileMenu());
         });
         
+        // Handle dropdown functionality for desktop
+        if (this.dropdownItem) {
+            this.dropdownItem.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggleDropdown();
+            });
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                this.closeDropdown();
+            }
+        });
+        
         // Handle scroll for navbar background
         window.addEventListener('scroll', () => this.handleScroll());
         
-        // Close mobile menu on window resize
+        // Close mobile menu and dropdown on window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 this.closeMobileMenu();
             }
         });
         
-        // Close mobile menu on escape key
+        // Close mobile menu and dropdown on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.closeMobileMenu();
+                this.closeDropdown();
             }
         });
+    }
+    
+    toggleDropdown() {
+        const isOpen = this.navbar?.classList.contains('expanded') || 
+                      this.dropdownItem?.getAttribute('aria-expanded') === 'true';
+        
+        if (isOpen) {
+            this.closeDropdown();
+        } else {
+            this.openDropdown();
+        }
+    }
+    
+    openDropdown() {
+        this.navbar?.classList.add('expanded');
+        this.dropdownItem?.classList.add('open');
+        this.dropdownItem?.setAttribute('aria-expanded', 'true');
+    }
+    
+    closeDropdown() {
+        this.navbar?.classList.remove('expanded');
+        this.dropdownItem?.classList.remove('open');
+        this.dropdownItem?.setAttribute('aria-expanded', 'false');
     }
     
     toggleMobileMenu() {
@@ -79,6 +120,9 @@ class Navbar {
         } else {
             this.navbar?.classList.remove('scrolled');
         }
+        
+        // Close dropdown on scroll
+        this.closeDropdown();
     }
 }
 

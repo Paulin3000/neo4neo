@@ -10,17 +10,21 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.navbar.expanded {
+    height: auto;
 }
 
 .navbar-container {
     margin: 0 auto;
-    padding: 0 var(--padding-x) ;
+    padding: 0 var(--padding-x);
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
 }
-
 
 .navbar-logo {
     height: 40px;
@@ -37,6 +41,7 @@
 
 .nav-item {
     margin: 0;
+    position: relative;
 }
 
 .nav-link {
@@ -46,7 +51,6 @@
     transition: color 0.3s ease;
     position: relative;
 }
-
 
 /* Der Kreis hinter dem Pfeil */
 .nav-pill {
@@ -66,7 +70,7 @@
     width: 12px;
     height: 12px;
     display: block;
-    filter: brightness(0) invert(1); /* macht das Icon weiß, falls schwarz geliefert */
+    filter: brightness(0) invert(1);
 }
 
 /* Hover-Feedback optional */
@@ -80,28 +84,79 @@
     transform: rotate(180deg);
 }
 
-/*
-.nav-link:hover {
-    color: #007bff;
+/* Extended Navbar Section */
+.navbar-extended {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.nav-link::after {
+.navbar.expanded .navbar-extended {
+    max-height: 120px;
+    opacity: 1;
+}
+
+.navbar-extended-container {
+    margin: 0 auto;
+    padding: 0 var(--padding-x);
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.courses-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.courses-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+}
+
+.course-item {
+    margin: 0;
+}
+
+.course-link {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+}
+
+.course-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-brand-pink);
+    transform: translateY(-2px);
+}
+
+.course-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: 8px;
+    left: 20px;
     width: 0;
     height: 2px;
-    background-color: #007bff;
+    background: var(--color-brand-pink);
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.course-link:hover::after {
+    width: calc(100% - 40px);
 }
-
- */
-
 
 /* Mobile Hamburger */
 .navbar-toggle {
@@ -198,6 +253,10 @@
         display: flex;
     }
     
+    .navbar-extended {
+        display: none;
+    }
+    
     /* Hamburger Animation */
     .navbar-toggle.active .hamburger-line:nth-child(1) {
         transform: rotate(45deg) translate(4px, 8px);
@@ -218,5 +277,19 @@
         gap: 1.5rem;
     }
     
+    .courses-list {
+        gap: 2rem;
+    }
+    
+    .course-link {
+        font-size: 15px;
+        padding: 10px 16px;
+    }
+}
 
+/* Small Desktop Adjustments */
+@media (max-width: 1200px) and (min-width: 993px) {
+    .courses-list {
+        gap: 2.5rem;
+    }
 }
