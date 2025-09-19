@@ -51,7 +51,7 @@ class Navbar {
 
     // Close mobile menu and dropdown on window resize
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         this.closeMobileMenu();
       }
     });
