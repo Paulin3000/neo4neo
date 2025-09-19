@@ -46,6 +46,40 @@
     transition: color 0.3s ease;
     position: relative;
 }
+
+
+/* Der Kreis hinter dem Pfeil */
+.nav-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--color-brand-pink);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: transform .2s ease, filter .2s ease;
+}
+
+/* Das SVG-Icon */
+.nav-pill img {
+    width: 12px;
+    height: 12px;
+    display: block;
+    filter: brightness(0) invert(1); /* macht das Icon weiß, falls schwarz geliefert */
+}
+
+/* Hover-Feedback optional */
+.nav-item.has-sub:hover .nav-pill {
+    filter: brightness(1.06) saturate(1.05);
+}
+
+/* Drehung, wenn geöffnet: .open ODER aria-expanded="true" setzen */
+.nav-item.has-sub.open .nav-pill,
+.nav-item.has-sub[aria-expanded="true"] .nav-pill {
+    transform: rotate(180deg);
+}
+
 /*
 .nav-link:hover {
     color: #007bff;
