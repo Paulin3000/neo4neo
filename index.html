@@ -1,127 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>neo4neo</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components/navbar.css">
-
-</head>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-    <div class="navbar-container">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
         <!-- Logo -->
         <div class="navbar-brand">
-            <a href="/">
-                <img src="assets/n4n_Logo.svg" alt="neo4neo" class="navbar-logo">
-            </a>
+          <a href="/">
+            <img src="assets/n4n_Logo.svg" alt="neo4neo" class="navbar-logo" />
+          </a>
         </div>
 
         <!-- Navigation Items (Desktop) -->
         <ul class="navbar-nav" id="navbar-nav">
-            <li class="nav-item has-sub" aria-expanded="false">
-                <a href="#kurse" class="nav-link">Kurse</a>
-                <span class="nav-pill" aria-hidden="true">
-                    <img src="assets/icons/arrow-down-bold.svg" alt="">
-                </span>
-            </li>
-            <li class="nav-item">
-                <a href="#ueber-uns" class="nav-link">Über uns</a>
-            </li>
-            <li class="nav-item">
-                <a href="#kontakt" class="nav-link">Kontakt</a>
-            </li>
+          <li class="nav-item has-sub" aria-expanded="false">
+            <a href="#kurse" class="nav-link">Kurse</a>
+            <span class="nav-pill" aria-hidden="true">
+              <img src="assets/icons/arrow-down-bold.svg" alt="" />
+            </span>
+          </li>
+          <li class="nav-item">
+            <a href="#ueber-uns" class="nav-link">Über uns</a>
+          </li>
+          <li class="nav-item">
+            <a href="#kontakt" class="nav-link">Kontakt</a>
+          </li>
         </ul>
 
-        <button class="button navbar-cta">Anmelden
-            <img src="assets/icons/user-fill.svg" alt="user" />
+        <button class="button navbar-cta">
+          Anmelden
+          <img src="assets/icons/user-fill.svg" alt="user" />
         </button>
 
         <!-- Mobile Hamburger -->
-        <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+        <button
+          class="navbar-toggle"
+          id="navbar-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
-    </div>
+      </div>
 
-    <!-- Extended Navbar Content -->
-    <div class="navbar-extended" id="navbar-extended">
+      <!-- Extended Navbar Content -->
+      <div class="navbar-extended" id="navbar-extended">
         <div class="navbar-extended-container">
-            <div class="courses-dropdown">
-                <ul class="courses-list">
-                    <li class="course-item">
-                        <a href="#brigorio" class="course-link">Bigorio, Tessin </a>
-                    </li>
-                    <li class="course-item">
-                        <a href="#moeschberg" class="course-link">Möschberg, Bern</a>
-                    </li>
-                    <li class="course-item">
-                        <a href="#chauxdabel" class="course-link">Chaux d'Abel, Jura  </a>
-                    </li>
-                </ul>
-            </div>
+          <div class="courses-dropdown">
+            <ul class="courses-list">
+              <li class="course-item">
+                <a href="#brigorio" class="course-link">Bigorio, Tessin </a>
+              </li>
+              <li class="course-item">
+                <a href="#moeschberg" class="course-link">Möschberg, Bern</a>
+              </li>
+              <li class="course-item">
+                <a href="#chauxdabel" class="course-link"
+                  >Chaux d'Abel, Jura
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Mobile Overlay -->
-    <div class="navbar-overlay" id="navbar-overlay">
+      <!-- Mobile Overlay -->
+      <div class="navbar-overlay" id="navbar-overlay">
         <div class="navbar-overlay-content">
-            <nav class="mobile-nav">
-                <div class="mobile-nav-section">
-                    <h3 class="mobile-nav-title">Kurse</h3>
-                    <ul class="mobile-submenu">
-                        <li><a href="#brigorio" class="mobile-submenu-link">Bigorio, Tessin</a></li>
-                        <li><a href="#moeschberg" class="mobile-submenu-link">Möschberg, Bern</a></li>
-                        <li><a href="#chauxdabel" class="mobile-submenu-link">Chaux d'Abel, Jura</a></li>
-                    </ul>
-                </div>
-                
-                <div class="mobile-nav-section">
-                    <h3 class="mobile-nav-title">
-                        <a href="#ueber-uns" class="mobile-nav-link">Über uns</a>
-                    </h3>
-                </div>
-                
-                <div class="mobile-nav-section">
-                    <h3 class="mobile-nav-title">
-                        <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
-                    </h3>
-                </div>
-                
-                <div class="mobile-nav-section">
-                    <h3 class="mobile-nav-title">
-                        <a href="#anmelden" class="mobile-nav-link">Anmeldung</a>
-                    </h3>
-                </div>
-            </nav>
+          <nav class="mobile-nav">
+            <div class="mobile-nav-section">
+              <h3 class="mobile-nav-title">Kurse</h3>
+              <ul class="mobile-submenu">
+                <li>
+                  <a href="#brigorio" class="mobile-submenu-link"
+                    >Bigorio, Tessin</a
+                  >
+                </li>
+                <li>
+                  <a href="#moeschberg" class="mobile-submenu-link"
+                    >Möschberg, Bern</a
+                  >
+                </li>
+                <li>
+                  <a href="#chauxdabel" class="mobile-submenu-link"
+                    >Chaux d'Abel, Jura</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="mobile-nav-section">
+              <h3 class="mobile-nav-title">
+                <a href="#ueber-uns" class="mobile-nav-link">Über uns</a>
+              </h3>
+            </div>
+
+            <div class="mobile-nav-section">
+              <h3 class="mobile-nav-title">
+                <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+              </h3>
+            </div>
+
+            <div class="mobile-nav-section">
+              <h3 class="mobile-nav-title">
+                <a href="#anmelden" class="mobile-nav-link">Anmeldung</a>
+              </h3>
+            </div>
+          </nav>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<section class="hero">
+    <section class="hero">
+      <video playsinline autoplay muted id="bg-video">
+        <source src="assets/background-video.mp4" type="video/mp4" />
+      </video>
 
-    <video playsinline autoplay muted id="bg-video" >
-        <source src="assets/background-video.mp4" type="video/mp4">
-    </video>
-
-    <div class="hero-content-wrapper">
+      <div class="hero-content-wrapper">
         <div class="hero-content">
-            <h1>Starte deine Karriere in der Neonatologie</h1>
-            <p>Praxisorientierte Weiterbildung und ein starkes Netzwerk aus jungen und erfahrenen Ärzt:innen – das findest du bei neo4neo.</p>
+          <h1>Starte deine Karriere in der Neonatologie</h1>
+          <p>
+            Praxisorientierte Weiterbildung und ein starkes Netzwerk aus jungen
+            und erfahrenen Ärzt:innen – das findest du bei neo4neo.
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-<section class="courses" id="kurse">
-    <div class="courses-content">
+    <section class="courses">
+      <div class="courses-content">
         <h2>Unsere Kurse</h2>
-        <p>Entdecke unser umfassendes Angebot an praxisorientierten Weiterbildungen in der Neonatologie.</p>
+        <p>
+          Entdecke unser umfassendes Angebot an praxisorientierten
+          Weiterbildungen in der Neonatologie.
+        </p>
 
         <!-- Placeholder content for testing -->
         <div class="course-placeholder">Grundkurs Neonatologie</div>
@@ -129,17 +150,37 @@
         <div class="course-placeholder">Spezialkurs Beatmung</div>
 
         <!-- Add more content to test the scroll effect -->
-        <div style="height: 200px; background: #f5f5f5; border-radius: 8px; margin: 2rem 0; display: flex; align-items: center; justify-content: center; color: #666;">
-            More content here...
+        <div
+          style="
+            height: 200px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+          "
+        >
+          More content here...
         </div>
-        <div style="height: 200px; background: #f0f0f0; border-radius: 8px; margin: 2rem 0; display: flex; align-items: center; justify-content: center; color: #666;">
-            Even more content...
+        <div
+          style="
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+          "
+        >
+          Even more content...
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<script src="js/navbar.js"></script>
-
-</body>
+    <script src="js/navbar.js"></script>
+  </body>
 </html>

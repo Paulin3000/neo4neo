@@ -203,11 +203,14 @@
     letter-spacing: -1px;
 }
 
+/*
 @media (max-width: 480px) {
     .mobile-nav-link {
         font-size: 20px;
     }
 }
+
+ */
 
 .mobile-nav-link:hover {
     opacity: 0.7;
