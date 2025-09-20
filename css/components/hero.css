@@ -14,7 +14,8 @@
     z-index: -1;
 }
 
-.hero-content-wrapper {
+.hero-container-wrapper {
+    /* same size as video */
     aspect-ratio: 16 / 9;
     position: absolute;
     top: 0;
@@ -22,10 +23,19 @@
     width: 100%;
     z-index: 1;
 
+}
+
+.hero-container {
+    max-width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: var(--padding-y);
+    padding-right: var(--padding-x);
+    padding-left: var(--padding-x);
+    padding-bottom: var(--padding-y);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: var(--padding-x);
 }
 
 .hero-content {
@@ -49,10 +59,9 @@
         width: 100%;
     }
 
-    .hero-content-wrapper {
+    .hero-container-wrapper {
         position: relative;
         aspect-ratio: auto;
-        padding: var(--padding-x);
     }
 
     .hero-content {
