@@ -7,12 +7,15 @@
 
 :root {
     --font-family: 'Raleway';
-    --border-radius: 8px;
+    --border-radius-section: 2rem;
+    --border-radius: 1rem;
     --padding-x: 6rem;
+    --padding-y: 6rem;
     --color-text-dark: #7A4185;
     --color-brand-pink: #C15CD6;
     --color-brand-blue: #5797FF;
-    --gradient-primary: linear-gradient(135deg, var(--color-brand-pink) 0%, var(--color-brand-blue) 100%);
+    --gradient-headings: linear-gradient(135deg, var(--color-brand-pink) 0%, var(--color-brand-blue) 100%);
+    --gradient-background: linear-gradient(135deg, #d6e0ff 0%, #c8d8ff 100%);
 }
 
 
@@ -32,7 +35,7 @@ h1 {
     line-height: 1;
     letter-spacing: -1.5px;
 
-    background: var(--gradient-primary);
+    background: var(--gradient-headings);
     background-size: 100% 200%; /* Make background taller */
     background-position: 0 0; /* Position it at the top */
     -webkit-background-clip: text;
@@ -46,6 +49,14 @@ h2 {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1.5px;
+
+    background: var(--gradient-headings);
+    background-size: 100% 200%; /* Make background taller */
+    background-position: 0 0; /* Position it at the top */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: 0.1em; /* Add small padding for descenders */
 }
 
 h3, h4, h5, h6 {
@@ -74,6 +85,7 @@ button {
     /* tablet */
     :root {
         --padding-x: 4rem;
+        --padding-y: 6rem;
     }
 
     h1 {
@@ -114,7 +126,8 @@ button {
 
 @media (max-width: 480px) {
     :root {
-        --padding-x: 2rem; /* 32px on mobile */
+        --padding-x: 2rem;
+        --padding-y: 4rem;
     }
 
     h1, h2 {
