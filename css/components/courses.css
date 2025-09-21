@@ -36,14 +36,15 @@
     .courses {
         background: var(--gradient-background);
     }
+    .courses-container {
+        gap: 4rem;
+    }
 }
+
 
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    .courses {
-        background: var(--gradient-background);
-    }
 
     .courses-container {
         flex-direction: column;
