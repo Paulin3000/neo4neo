@@ -32,6 +32,12 @@
     gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .courses {
+        background: var(--gradient-background);
+    }
+}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {

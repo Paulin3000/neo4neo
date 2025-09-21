@@ -29,10 +29,7 @@
     max-width: 1600px;
     height: 100%;
     margin: 0 auto;
-    padding-top: var(--padding-y);
-    padding-right: var(--padding-x);
-    padding-left: var(--padding-x);
-    padding-bottom: var(--padding-y);
+    padding: var(--padding-y) var(--padding-x);
     display: flex;
     align-items: center;
     justify-content: flex-start;
