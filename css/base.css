@@ -74,6 +74,7 @@ p, a{
     line-height: 1.4;
     letter-spacing: 0;
     color: var(--color-text-dark);
+    text-decoration: none;
 }
 
 button {
