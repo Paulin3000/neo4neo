@@ -32,19 +32,25 @@
     gap: 2rem;
 }
 
+@media (max-width: 1200px) {
+    .courses-container {
+        gap: 4rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .courses {
         background: var(--gradient-background);
     }
     .courses-container {
-        gap: 4rem;
+        gap: 2.5rem;
     }
 }
 
 
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 922px) {
 
     .courses-container {
         flex-direction: column;
