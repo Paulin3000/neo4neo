@@ -52,7 +52,7 @@
 }
 
 .footer-info-block h3 {
-    color: var(--color-text-dark);
+
     margin-bottom: 0.5rem;
 }
 
@@ -73,7 +73,7 @@
 
 .footer-nav a {
     text-decoration: none;
-    color: var(--color-text-dark);
+
     transition: opacity 0.3s ease;
     line-height: 1.6;
 }

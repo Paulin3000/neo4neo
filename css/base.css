@@ -9,15 +9,10 @@
 :root {
   --font-family: 'Raleway';
 
-
   --color-text-dark: #7a4185;
   --color-brand-pink: #c15cd6;
   --color-brand-blue: #5797ff;
-  --gradient-headings: linear-gradient(
-    135deg,
-    var(--color-brand-pink) 0%,
-    var(--color-brand-blue) 100%
-  );
+  --gradient-headings: linear-gradient(135deg, var(--color-brand-pink) 0%, var(--color-brand-blue) 100%);
   --gradient-background: linear-gradient(135deg, #d6e0ff 0%, #c8d8ff 100%);
   --image-border-radius: 1rem;
   --section-border-radius: 2rem;
@@ -66,14 +61,12 @@ h2 {
   padding-bottom: 0.1em; /* Add small padding for descenders */
 }
 
-h3,
-h4,
-h5,
-h6 {
+h3, h4, h5, h6 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -1px;
+  color: var(--color-text-dark);
 }
 
 p,
@@ -94,6 +87,7 @@ button {
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0;
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -133,7 +127,6 @@ button {
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0;
-    color: var(--color-text-dark);
   }
   button {
     font-size: 18px;
@@ -170,7 +163,6 @@ button {
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0;
-    color: var(--color-text-dark);
   }
 
   button {
