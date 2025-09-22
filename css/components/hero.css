@@ -26,10 +26,10 @@
 }
 
 .hero-container {
-    max-width: 1600px;
+    max-width: var(--container-max-width);
     height: 100%;
     margin: 0 auto;
-    padding: var(--padding-y) var(--padding-x);
+    padding: var(--section-padding-y) var(--section-padding-x);
     display: flex;
     align-items: center;
     justify-content: flex-start;

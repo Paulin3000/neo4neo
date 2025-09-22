@@ -10,12 +10,12 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  padding: 0 var(--section-padding-x);
 }
 
 .navbar-container {
-  max-width: 1600px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 var(--padding-x);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +99,7 @@
 
 .navbar-extended-container {
   margin: 0 auto;
-  padding: 0 var(--padding-x);
+  padding: 0 var(--section-padding-x);
   display: flex;
   align-items: center;
   min-height: 80px;
@@ -174,7 +174,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
-  padding: 120px var(--padding-x) 2rem;
+  padding: 120px var(--section-padding-x) 2rem;
 }
 
 .mobile-nav {
@@ -271,7 +271,7 @@
 
 @media (max-width: 480px) {
   .navbar-overlay-content {
-    padding: 100px var(--padding-x) 2rem;
+    padding: 100px var(--section-padding-x) 2rem;
   }
 
   .mobile-nav-title {

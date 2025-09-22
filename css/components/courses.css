@@ -2,27 +2,27 @@
     position: relative;
     z-index: 10; /* Higher than hero (1) but lower than navbar (1000) */
     background: white;
-    padding: var(--padding-y) var(--padding-x);
-    border-radius: var(--border-radius-section) var(--border-radius-section) 0 0;
+    padding: var(--section-padding-y) var(--section-padding-x);
+    border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
 }
 
 .courses-container {
     display: flex;
     align-items: center;
     gap: 6rem;
-    max-width: 1600px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
 }
 
 .courses-image {
     flex: 1;
-    border-radius: var(--border-radius);
+    border-radius: var(--image-border-radius);
 }
 
 .courses-image img {
     width: 100%;
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: var(--image-border-radius);
 }
 
 .courses-content {
