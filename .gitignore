@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# build / tooling
+dist/
+build/
+.out/
+.cache/
+.temp/
+coverage/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# misc
+*.log
