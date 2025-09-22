@@ -45,6 +45,7 @@
 
 .nav-item {
     position: relative;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -54,6 +55,8 @@
     transition: color 0.3s ease;
     position: relative;
 }
+
+
 
 /* Der Kreis hinter dem Pfeil */
 .nav-pill {
@@ -76,9 +79,8 @@
     filter: brightness(0) invert(1);
 }
 
-/* Hover-Feedback optional */
 .nav-item.has-sub:hover .nav-pill {
-    filter: brightness(1.06) saturate(1.05);
+    filter: brightness(1.05) saturate(1.1);
 }
 
 /* Drehung */
@@ -130,6 +132,7 @@
     display: block;
     position: relative;
 }
+
 
 /* Mobile Hamburger */
 .navbar-toggle {
@@ -197,95 +200,4 @@
     color: var(--color-text-dark);
     text-decoration: none;
     transition: opacity 0.3s ease;
-    /* Override global a styles with h3 styles */
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -1px;
-}
-
-/*
-@media (max-width: 480px) {
-    .mobile-nav-link {
-        font-size: 20px;
-    }
-}
-
- */
-
-.mobile-nav-link:hover {
-    opacity: 0.7;
-}
-
-.mobile-submenu {
-    list-style: none;
-    padding-left: 1rem;
-}
-
-.mobile-submenu li {
-    margin-bottom: 0.5rem;
-}
-
-.mobile-submenu-link {
-    color: var(--color-text-dark);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    display: block;
-    transition: opacity 0.3s ease;
-}
-
-.mobile-submenu-link:hover {
-    opacity: 0.7;
-}
-
-/* Mobile Styles */
-@media (max-width: 1024px) {
-    .navbar-nav,
-    .navbar-cta {
-        display: none;
-    }
-    
-    .navbar-toggle {
-        display: flex;
-    }
-    
-    .navbar-extended {
-        display: none;
-    }
-    
-    .navbar {
-        overflow: visible;
-    }
-    
-    /* Hamburger Animation */
-    .navbar-toggle.active .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(4px, 8px);
-    }
-    
-    .navbar-toggle.active .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .navbar-toggle.active .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -8px);
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-overlay-content {
-        padding: 100px var(--padding-x) 2rem;
-    }
-    
-    .mobile-nav-title {
-        font-size: 20px;
-    }
-    
-    .mobile-nav-link {
-        font-size: 20px; /* Override for mobile */
-    }
-    
-    .mobile-submenu-link {
-        font-size: 16px;
-    }
 }
