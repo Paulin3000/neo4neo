@@ -1,67 +1,65 @@
 .hero {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    height: 100vh;
-    z-index: 1; /* Lower than navbar (1000) but higher than content behind */
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 1; /* Lower than navbar (1000) but higher than video behind */
 }
 
 #bg-video {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .hero-container-wrapper {
-    /* same size as video */
-    aspect-ratio: 16 / 9;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1;
-
+  /* same size as video */
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  padding: var(--section-padding-y) var(--section-padding-x);
 }
 
 .hero-container {
-    max-width: var(--container-max-width);
-    height: 100%;
-    margin: 0 auto;
-    padding: var(--section-padding-y) var(--section-padding-x);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  max-width: var(--container-max-width);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-content {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .hero-content h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1024px) {
-    .hero {
-        display: flex;
-        flex-direction: column;
-        padding-top: 80px;
-        position: sticky; /* Keep sticky on mobile too */
-    }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* size of navbar */
+  }
 
-    #bg-video {
-        position: relative;
-        width: 100%;
-    }
+  #bg-video {
+    position: relative;
+    width: 100%;
+  }
 
-    .hero-container-wrapper {
-        position: relative;
-        aspect-ratio: auto;
-    }
+  .hero-container-wrapper {
+    position: relative;
+    aspect-ratio: auto;
+  }
 
-    .hero-content {
-        max-width: 92%;
-    }
+  .hero-content {
+    max-width: 92%;
+  }
 }
