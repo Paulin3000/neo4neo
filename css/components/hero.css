@@ -4,6 +4,8 @@
   overflow: hidden;
   height: 100vh;
   z-index: 1; /* Lower than navbar (1000) but higher than video behind */
+  transform: translateZ(0); /*Ensure proper stacking context */
+  isolation: isolate; /* Create new stacking context */
 }
 
 #bg-video {
